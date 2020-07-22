@@ -14,6 +14,14 @@ l = range(len(b) - 1, -1, -1)
 for i in l:
     print(b[i])
 '''
+'''
+work = input()
+result = ''
+for char in work:
+    result = char + result
+print(result)
+'''
+
 
 '''
     number = int(input())
@@ -46,7 +54,15 @@ if 2 <= number <= 1000:
 else:
     print('2 이상 1000 이하의 정수를 입력해주세요.')
 '''
+'''
+number = int(input())
 
+is_prime = 'Y'
+for i in range(2, number):
+    if number % i == 0:
+        is_prime = ('N')
+print(is_prime)
+'''
 '''
 number = [26, 39, 51, 53, 57, 79, 85]
 j = 0
