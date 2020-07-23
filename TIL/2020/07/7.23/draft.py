@@ -85,12 +85,14 @@ def get_middle_char(name):
         return result
 print(get_middle_char('가나다라라마바사'))
 '''
-def fib(num):
-    if num == 1:
-        return 1
-    elif num == 2:
-        return fib(num - 1) + 1
-    return fib(num - 1) + fib(num - 2)
-    
-print(fib(7))
 
+T = int(input())
+for n in range(1, T + 1):
+    num = list(map(int, input().split()))
+    sor = sorted(num)
+    ln = len(num)
+    result = 0
+    for i in range(1, ln - 1):
+        result += sor[i]
+        avg = int(result / (ln - 2))
+    print(f'#{n} {avg}')
