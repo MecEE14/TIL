@@ -20,11 +20,9 @@ def get_middle_char(name):
     a = list(name)
     b = int(len(a) / 2)
     if len(a) % 2 == 0:
-        result = a[b - 1] + a[b]
-        return result
+        print(a[b - 1] + a[b])
     else:
-        result = a[b]
-        return result
+        print(a[b])
 get_middle_char('가나다라마바사')
 ```
 
