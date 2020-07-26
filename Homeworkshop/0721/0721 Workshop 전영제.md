@@ -1,83 +1,54 @@
-## 7.20 Homework 전영제
+## 0721 Workshop 전영제
 
-### 1. python 예약어
-
-```python
-False, None, True, and, as, assert, break, class, continue, def, del, elif, else, except, finally, for, from, global, if, import, in, is, lambda, nonlocal, not, or, pass, raise, return, try, while, with, yield
-```
-
-### 2. 실수 비교
+### 1
 
 ```python
-import math
-
-num1 = 0.1 * 3
-num2 = 0.3
-
-math.isclose(num1, num2)
-```
-
-### 3. 이스케이프 시퀀스
-
-|    문제     |  답  |
-| :---------: | :--: |
-|  1. 줄바꿈  |  \n  |
-|    2. 탭    |  \t  |
-| 3. 백슬래시 | \\\  |
-
-### 4. String Interpolation
-
-```python
-name = '철수'
-print(f'안녕, {name}야')
-```
-
-### 5. 형 변환
-
-```python
-int('3.5')는 오류가 발생한다
-int(float('3.5'))로 쓰거나 int(3.5)로 쓴다
-```
-
-### 6. 네모 출력
-
-```python
-n = 5
-m = 9
-row = '*'*5
-print(f'{row}\n'*m)
-```
-
-### 7. 이스케이프 시퀀스 응용
-
-```
-print('"파일은 c:\\Window\\Users\\내문서\\Python에 저장이 되었습니다"\n나는 생각했다. \'cd를 써서 git bash로 들어가 봐야지\'')
-```
-
-### 8. 근의 공식
-
-```python
-A = input('이차항의 계수:')
-B = input('일차항의 계수:')
-C = input('상수항의 계수:')
-a = int(A)
-b = int(B)
-c = int(C)
-
-if ((b**2)-4*a*c) > 0:
-    answer1 = (-b+((b**2)-4*a*c)**0.5)/(2*a)
-    answer2 = (-b-((b**2)-4*a*c)**0.5)/(2*a)
-    print(f'근은 {answer1}, {answer2}입니다.')
-elif ((b**2)-4*a*c) == 0:
-    common_answer = (-b+((b**2)-4*a*c)**0.5)/(2*a)
-    print(f'중근은 {common_answer}입니다.')
+N = int(input('자연수를 입력하세요. : '))
+if 1000 >= N >= 1:
+    for i in range(1, N+1):
+        if N % i == 0:
+            print(i, end=' ')
 else:
-	print('실근이 존재하지 않습니다.')
+    print("0부터 1000사이의 자연수만 입력하세요")
 ```
 
 
 
+### 2
+
+``` python
+number = [
+    85, 72, 38, 80, 69, 65, 68, 96, 22, 49, 67,
+    51, 61, 63, 87, 66, 24, 80, 83, 71, 60, 64,
+    52, 90, 60, 49, 31, 23, 99, 94, 11, 25, 24
+]
+number.sort()
+print(number[17])
+```
 
 
 
+### 3
+
+``` python
+num = int(input('자연수를 입력하세요 : '))
+#nums = range(1, num + 1)
+j = 1
+for i in range(1, num+1):
+    for j in range(1, i+1):
+        print(j, end=' ')
+    print('')
+```
+
+
+
+### 4
+
+``` python
+j = 1
+for i in range(2, 10):
+    print(f'------- [{i} 단] -------')
+    for j in range(1, 10):
+        print(f'{i} X {j} = {i*j}')
+```
 
