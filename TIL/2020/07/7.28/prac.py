@@ -95,3 +95,15 @@ def change_rotten_fruit(fruit_bag):
 print(change_rotten_fruit(['apple', 'rottenBanana', 'apple'] ))
 print(change_rotten_fruit(['rottenapple', 'rottenBanana', 'apple', 'rottenGrape']))
 '''
+
+# 썩은 과일 찾기
+def change_rotten_fruit(fruit_bag):
+    new_bag = []
+
+    for fruit in fruit_bag:
+        fruit = fruit.replace('rotten', '').lower()
+        new_bag.append(fruit)
+
+    return new_bag
+print(change_rotten_fruit(['apple', 'rottenBanana', 'apple'] ))
+print(change_rotten_fruit(['rottenapple', 'rottenBanana', 'apple', 'rottenGrape']))
