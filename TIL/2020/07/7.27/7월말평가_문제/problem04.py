@@ -1,8 +1,6 @@
 def dec_to_bin(n):
-    if n < 0:
-        return 'Must be a positive integer'
-    elif n == 0:
-        return '0'
+    if n == 0:
+        return ''
     else:
         return dec_to_bin(n//2) + str(n%2)
 
