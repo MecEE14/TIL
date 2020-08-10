@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First MarkUp</title>
+</head>
+<body>
+    <header>
+        <img src="ssafy.png" alt="싸피 이미지" width="400px">
+        <h1>SSAFY 4기 학생 건강 설문</h1>
+    </header>
+    <section>
+        <form action="#" method="GET">
+            <div>
+                <label for="name">이름을 기재해주세요.</label><br>
+                <input type="text" id="name" autofocus>
+            </div>
+
+            <div>
+                <label for="location">지역을 선택해주세요.</label><br>
+                <select name="location" id="location" required>
+                    <option value="">선택</option>
+                    <option value="서울">서울</option>
+                    <option value="대전">대전</option>
+                    <option value="광주">광주</option>
+                    <option value="구미">구미</option>
+                </select>
+                
+            </div>
+            <div>
+                <p>오늘의 체온을 선택해주세요.</p>
+                <input type="radio" name="body-heat" id="normal" value="normal" checked>
+                <label for="normal">37.5도 미만</label>
+                <input type="radio" name="body-heat" id="warning" value="warning">
+                <label for="warning">37.5도 이상</label>
+            </div>
+            <hr>
+            <input type="submit" value="제출하기">
+        </form>
+    </section>
+    <footer>
+        Google 설문지를 통해 비밀번호를 전달하지 마시오.
+    </footer>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,79 @@
+<!-- markup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="https://www.ssafy.com/">
+      <img src="C:\Users\Yje\Desktop\TIL\TIL\2020\08\0810\live/ssafy2.png" alt="main img" width="300">
+    </a>
+    <h1>SSAFY 4기 학생 건강설문</h1>
+  </header>
+  <section>
+    <form action="HTTPS://search.naver.com/search.naver" method="GET">
+      <!-- name? 서버에 어떠한 값을 보냈을때 참조할 key값 -->
+      <input type="text" name="query" id="my_search">
+      <input type="submit">
+    </form>
+    <form action="#">
+      <div>
+        <label for="name">이름을 기재해주세요.</label><br>
+        <!-- 라벨 태그가 없어도 input 태그는 정상적으로 작동한다. -->
+        <!-- id에 들어갈 값은 항상 고유한 값이어야 한다. -->
+        <input type="text" id="name" name="name" autofocus>
+      </div>
+      <hr>
+      
+      <div>
+        <label for="region">지역을 선택해주세요.</label><br>
+        <select name="region" id="region" required>
+          <option value="서울">서울</option>
+          <option value="대전">대전</option>
+          <option value="구미">구미</option>
+          <option value="광주" disabled>광주</option>
+        </select>
+      </div>
+      <hr>
+
+      <div>
+        <p>오늘의 체온을 선택해주세요.</p>
+        <input type="radio" name="body-heat" id="normal" value="normal" checked>
+        <label for="normal">37도 미만</label><br>
+        <input type="radio" name="body-heat" id="warning" value="warning">
+        <label for="warning">37도 이상</label>
+      </div>
+      <hr>
+      <!-- 이메일 타입만 입력 받을 수 있다. -->
+      <input type="email">
+      <!-- 비밀 번호 형식으로 값을 변경합니다. -->
+      <input type="password">
+      
+      <input type="submit" value="제출">
+    </form>
+    
+  </section>
+  <footer>
+    Google 설문지를 통해 비밀번호를 제출하지 마시오.
+  </footer>
+  그냥 작성하면 안되?
+  <p>
+    HTML은 분명 띄어쓰기를 무시한다고 했는데..
+
+    들여쓰기도.. 무시한다고 했는데....
+
+            얘는 왜 이래,,,?
+  </p>
+  <pre>
+    HTML은 분명 띄어쓰기를 무시한다고 했는데..
+
+    들여쓰기도.. 무시한다고 했는데....
+
+            얘는 왜 이래,,,?
+  </pre>
+</body>
+</html>
