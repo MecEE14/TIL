@@ -1,0 +1,22 @@
+[
+{
+    "model": "articles.article",
+    "pk": 13,
+    "fields": {
+        "title": "1111",
+        "content": "1111",
+        "created_at": "2020-08-20T10:34:41.251Z",
+        "updated_at": "2020-08-20T10:34:41.251Z"
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 14,
+    "fields": {
+        "title": "222222",
+        "content": "222222",
+        "created_at": "2020-08-21T02:14:36.030Z",
+        "updated_at": "2020-08-21T02:14:36.030Z"
+    }
+}
+]
