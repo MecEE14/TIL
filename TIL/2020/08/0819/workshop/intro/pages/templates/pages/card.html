@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+pages/card
+{% endblock  %}
+{% block content %}
+    <div class='row'>
+        {% for arty in articles %}
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://picsum.photos/200/300" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ arty.0 }}</h5>
+                <p class="card-text">{{ arty.1 }}</p>
+                <a href="{% url 'pages:community' %}" class="btn btn-primary">Post Article</a>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}

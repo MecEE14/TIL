@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 10000px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1>DTL for, if tags 연습</h1>
+  <h2>1. for tag</h2>
+  {% for menu in menus %}
+    {{ menu }}
+  {% endfor %}
+  <hr>
+  {% for menu in menus %}
+    {{ forloop.counter }} : {{ menu }}
+  {% endfor %}
+  <hr>
+  {% for x in empty_list %}
+    {{ x }}
+  {% empty %}
+    <p>아무것도 없어요!!</p>
+  {% endfor %}
+  <hr>
+  <h2>2. if tag</h2>
+  {% if '짜장면' in menus %}
+    <p>짜장면은 고추가루지</p>
+  {% endif %}
+  <hr>
+  {% if empty_list|length > 10 %}
+    <p>길이가 10보다 크네요.</p>
+  {% else %}
+    <p>길이가 10보다 작네요.</p>
+  {% endif %}
+  <hr>
+  <h2>3. length filter 활용</h2>
+  {% for fruit in fruits %}
+    <!-- >= <= != == > < in not in -->
+    {% if fruit|length > 5 %}
+      <!-- 과일 이름이 5글자를 넘어간다면 -->
+      <p>과일 이름이 너무 길어요.</p>
+    {% else %}
+      <!-- 그게 아니라면 -->
+      <p>{{ fruit }}</p>
+    {% endif %}
+  {% endfor %}
+  <hr>
+  <h2>4. lorem ipsum</h2>
+  <p>{% lorem %}</p>
+  <hr>
+  <p>{% lorem 3 w %}</p>
+  <p>{% lorem 3 w random %}</p>
+  <p>{% lorem 2 p %}</p>
+  <hr>
+  <h2>5. 글자수 제한</h2>
+  <p>{{ my_sentence|truncatewords:3 }}</p>
+  <p>{{ my_sentence|truncatechars:4 }}</p>
+  <p>{{ my_sentence|truncatechars:10 }}</p>
+  <hr>
+  <h2>6. 글자 관련 필터</h2>
+  <p>{{ 'abc'|length }}</p>
+  <p>{{ 'ABC'|lower }}</p>
+  <p>{{ 'abc'|upper }}</p>
+  <p>{{ 'my_sentence'|title }}</p>
+  <p>{{ 'abc def'|capfirst }}</p>
+  <p>{{ menus|random }}</p>
+  <hr>
+  <h2>7. 연산</h2>
+  <p>{{ 4|add:3 }}</p>
+  <hr>
+  <h2>8. 날짜표현</h2>
+  <p>{{ datetimenow }}</p>
+  <p>{{ datetimenow|date:"Y년 m월 d일" }}</p>
+  <p>DATE_FORMAT {% now "DATE_FORMAT" %}</p>
+  <p>DATETIME_FORMAT {% now "DATETIME_FORMAT" %}</p>
+  <p>SHORT_DATE_FORMAT {% now "SHORT_DATE_FORMAT" %}</p>
+  <p>SHORT_DATETIME_FORMAT {% now "SHORT_DATETIME_FORMAT" %}</p>
+  <p>{% now "Y-m-d H:i" %}</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+pages/community
+{% endblock  %}
+{% block content %}
+    <table class="table">
+    {% for arty in articles2 %}
+    {% if forloop.first %}
+        <thead>
+            <tr>
+            <th scope="col">{{arty.0 }}</th>
+            <th scope="col">{{arty.1 }}</th>
+            <th scope="col">{{arty.2 }}</th>
+            <th scope="col">{{arty.3 }}</th>
+            </tr>
+        </thead>
+    {% else %}
+        <tbody>
+            <tr>
+            <th scope="row">{{forloop.counter0}}</th>
+            <td>{{arty.0 }}</td>
+            <td>{{arty.1 }}</td>
+            <td>{{arty.2 }}</td>
+            </tr>
+        </tbody>
+    {% endif %}
+  {% endfor %}
+</table>
+{% endblock  %}
